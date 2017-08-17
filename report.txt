@@ -1,0 +1,91 @@
+PROJECT-2 REPORT
+S.K.N.KAVINDI
+E/13/183
+
+(1)ARRAY BASED IMPLEMENTATION OF STACK AND QUEUE
+
+(i)Execution times
+STACK
+
+Typical output of the given sampleProgram.c for stack
+Testing Stack
+Elapsed time 1.724000
+Stack testing completed...
+
+QUEUE
+
+Typical output of the given sampleProgram.c for queue
+Testing Queue
+Elapsed time 18102.168000
+Queue testing completed...
+
+We can see that the time taken to the Queue is higher than the time taken to the Stack.
+Because in stack implementation push and pop is done to the last element of the array.
+In queue implementation push is done as same as stack but the pop is done o the first element of the array and then we have to shift all the elements iin array towards the first element.
+So it will take some considerable time to analyze the array.
+
+(ii)Memory usage
+
+STACK
+for stack structure
+	int top->4bytes
+	int* myStack->8bytes
+
+Memory allocation for array is happen in CreateStack function.At that time it is allocated 400000bytes for the array in stack.
+
+QUEUE
+for the queue structure
+	int top->4bytes
+	int* myQueue->8bytes
+	
+Memory allocation for array is happen in CreateQueue function.At that time it is allocated 400000 bytes for the array in queue.	
+In array implemetation of stack and queue,a large memory space is allocated at once either it is used or not.
+
+(1)LINKED LIST BASED IMPLEMENTATION OF STACK AND QUEUE
+
+(i)Execution times
+
+STACK
+
+Typical output of the given sampleProgram.c for stack
+Testing Stack
+Elapsed time 13.388000
+Stack testing completed...
+
+QUEUE
+
+Typical output of the given sampleProgram.c for queue
+Testing Queue
+Elapsed time 19.520000
+Queue testing completed...
+
+When comparing array based implemetaion and linked list implementation consumes less amount of time.
+
+(ii)Memory allocation
+
+for node structure
+	int val->4bytes
+	node* next->8 bytes
+	
+for stack structure
+	s_Node *top_stack->8 bytes
+        int count->4 bytes
+        
+for queue structure
+	s_Node *front->8 bytes
+	s_Node *rear->8 bytes
+        int count->4bytes
+        
+Memory allocation for stack is happened in CreateStack function and memory allocation for each node is happen only in the StackPush function.
+memory is free in StackPop and  DeleteStack functions.
+Memory allocation for queue is happened in CreateQueue function and memory allocation for each node is happen only in the QueueEnqueue function.
+memory is free in QueueDequeue and  DeleteQueue functions.
+
+In linked list implementation memory allocation is happened only when needed.
+
+So linked list implementation is better than array implementation.
+
+        
+
+
+
